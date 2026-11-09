@@ -1,0 +1,303 @@
+/* ==========================================================================
+   Responsive Stylesheet (responsive.css)
+   Mobile First Architecture: 360px -> 430px -> 768px -> 1024px -> 1440px
+   Must be loaded after style.css
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Base Mobile Defaults (< 430px, from 360px)
+   -------------------------------------------------------------------------- */
+
+/* Navigation burger menu for mobile */
+@media (max-width: 767px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-4);
+    display: none;
+    flex-direction: column;
+    z-index: 99;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-1);
+    width: 100%;
+  }
+
+  .site-nav__link {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+  }
+
+  /* Catalog filter drawer toggle on mobile */
+  .catalog-filters__toggle {
+    display: flex !important;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+  }
+
+  .catalog-filters__content {
+    display: none;
+  }
+
+  .catalog-filters__content.is-open {
+    display: block;
+  }
+
+  /* Responsive Specs Table -> Card layout for small screens */
+  .product-table,
+  .product-table tbody,
+  .product-table tr,
+  .product-table th,
+  .product-table td {
+    display: block;
+  }
+
+  .product-table thead {
+    display: none;
+  }
+
+  .product-table tr {
+    margin-bottom: var(--space-3);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-surface);
+    overflow: hidden;
+  }
+
+  .product-table th {
+    width: 100%;
+    background-color: var(--color-accent-subtle);
+    color: var(--color-accent);
+    padding: var(--space-2) var(--space-4);
+    border-bottom: 1px solid var(--color-border-subtle);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .product-table td {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Breakpoint: 430px and wider (Larger Mobile Phones)
+   -------------------------------------------------------------------------- */
+@media (min-width: 430px) {
+  .hero__actions {
+    flex-direction: row;
+  }
+
+  .button--mobile-full {
+    width: auto;
+  }
+
+  .advantage-card {
+    padding: var(--space-6);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Breakpoint: 640px and wider (Phablets & Small Tablets)
+   -------------------------------------------------------------------------- */
+@media (min-width: 640px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .advantages-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+
+  .form-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .form-actions .button {
+    width: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Breakpoint: 768px and wider (Tablets & Medium Screens)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .site-header__inner {
+    padding-inline: var(--space-6);
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    display: block !important;
+    position: static;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .site-nav__list {
+    flex-direction: row;
+    gap: var(--space-1);
+  }
+
+  .hero {
+    padding-block: var(--space-12);
+  }
+
+  .hero__title {
+    font-size: 2.75rem;
+  }
+
+  /* Standard table on >=768px screens */
+  .product-table,
+  .product-table tbody,
+  .product-table tr,
+  .product-table th,
+  .product-table td {
+    display: revert;
+  }
+
+  .product-table th {
+    width: 35%;
+    background-color: var(--color-bg-surface-subtle);
+    color: var(--color-text-primary);
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  /* Catalog Layout: 2 Columns (Filter sidebar + products grid) */
+  .catalog-layout {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    align-items: start;
+    gap: var(--space-8);
+  }
+
+  .catalog-filters {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-4));
+  }
+
+  .catalog-filters__toggle {
+    display: none !important;
+  }
+
+  .catalog-filters__content {
+    display: block !important;
+  }
+
+  /* Product Detail: 2 Columns (Gallery + Details) */
+  .product-detail {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .product-detail__gallery {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-4));
+  }
+
+  /* Contacts layout */
+  .contacts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Footer */
+  .site-footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Breakpoint: 1024px and wider (Laptops & Desktops)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: var(--space-6);
+  }
+
+  .hero {
+    padding-block: var(--space-16);
+  }
+
+  .hero__title {
+    font-size: 3.25rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  .advantages-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .catalog-layout {
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: var(--space-10);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Breakpoint: 1440px and wider (Large Monitors & Widescreen)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1440px) {
+  :root {
+    --container-max-width: 1360px;
+  }
+
+  .hero__inner {
+    max-width: 960px;
+  }
+
+  .catalog-products .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .popular-products .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .product-card__title {
+    font-size: 1.3rem;
+  }
+}

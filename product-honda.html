@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Honda Civic в автосалоне ast3rr Auto. Японское качество, спортивный дизайн и современные технологии.">
+  <title>Honda Civic — ast3rr Auto</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html" aria-label="ast3rr Auto главная страница">
+        <svg class="site-header__logo-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <span>ast3rr Auto</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Открыть меню навигации">
+        <svg class="nav-toggle__icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">BMW M8</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заказ</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section" id="main-content">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a></li>
+        <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="location">Honda Civic</span></li>
+      </ol>
+    </nav>
+
+    <article class="product-detail">
+      <div class="product-detail__gallery">
+        <picture>
+          <source type="image/avif" srcset="images/honda-civic-360.avif 360w, images/honda-civic-480.avif 480w, images/honda-civic-720.avif 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 550px">
+          <source type="image/jpeg" srcset="images/honda-civic-360.jpg 360w, images/honda-civic-480.jpg 480w, images/honda-civic-720.jpg 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 550px">
+          <img class="product-detail__image" src="images/honda-civic-720.jpg" alt="Honda Civic серого цвета" width="720" height="450">
+        </picture>
+      </div>
+
+      <div class="product-detail__info">
+        <span class="product-detail__badge">В наличии</span>
+        <h1 class="product-detail__title">Honda Civic</h1>
+        <p class="product-detail__price">2 850 000 ₽</p>
+        <p class="product-detail__description">
+          Стильный японский седан с азартной управляемостью, просторным салоном и богатым комплексом безопасности Honda Sensing.
+        </p>
+
+        <section class="product-specs" aria-labelledby="specs-title">
+          <h2 class="section__title" id="specs-title" style="font-size: 1.35rem; margin-top: var(--space-4);">Технические характеристики</h2>
+          <div class="table-wrapper">
+            <table class="product-table">
+              <caption class="visually-hidden">Характеристики Honda Civic</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Параметр</th>
+                  <th scope="col">Значение</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Двигатель</th>
+                  <td data-label="Значение">2.0 л i-VTEC DOHC</td>
+                </tr>
+                <tr>
+                  <th scope="row">Мощность</th>
+                  <td data-label="Значение">158 л.с. (187 Нм)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Разгон 0–100 км/ч</th>
+                  <td data-label="Значение">8.9 сек</td>
+                </tr>
+                <tr>
+                  <th scope="row">Коробка передач</th>
+                  <td data-label="Значение">Бесступенчатый вариатор (CVT)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Привод</th>
+                  <td data-label="Значение">Передний (FWD)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <div class="product-detail__actions">
+          <button class="button button--primary js-open-order-dialog" type="button" data-product="Honda Civic" aria-haspopup="dialog">
+            Оформить покупку
+          </button>
+          <a class="button button--secondary" href="catalog.html">Назад в каталог</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title" aria-modal="true">
+    <div class="order-dialog__content">
+      <div class="order-dialog__header">
+        <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+        <button class="order-dialog__close" type="button" id="close-order-dialog" aria-label="Закрыть окно">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="notification notification--success" id="order-success-notification" tabindex="-1" hidden>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+        <span>Спасибо! Ваша заявка успешно принята, менеджер перезвонит вам.</span>
+      </div>
+
+      <form class="order-form" id="order-form" action="#" method="post" data-validate="true" novalidate>
+        <input id="selected-product" name="selected-product" type="hidden" value="Honda Civic">
+
+        <div class="form-group">
+          <label class="form-label form-label--required" for="modal-name">Ваше имя</label>
+          <input class="form-input" id="modal-name" name="name" type="text" placeholder="Иван Иванов" autocomplete="name" required minlength="2">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label form-label--required" for="modal-phone">Телефон</label>
+            <input class="form-input" id="modal-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" autocomplete="tel" required pattern="^(\+7|8)[\s\-]?[0-9]{3}[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$">
+            <span class="form-hint">Формат: +7 (900) 000-00-00</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label form-label--required" for="modal-email">E-mail</label>
+            <input class="form-input" id="modal-email" name="email" type="email" placeholder="client@example.com" autocomplete="email" required>
+          </div>
+        </div>
+
+        <label class="form-checkbox-wrapper">
+          <input class="form-checkbox" id="modal-agreement" name="agreement" type="checkbox" required>
+          <span class="form-checkbox-text">Я согласен на обработку персональных данных.</span>
+        </label>
+
+        <div class="form-actions">
+          <button class="button button--secondary" type="button" onclick="document.getElementById('order-dialog').close()">Отмена</button>
+          <button class="button button--primary" type="submit">Подтвердить заказ</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; 2026 ast3rr Auto. Контрольная работа №3 по дисциплине «Фронтенд и бэкенд разработка».</p>
+      <p>Кафедра Индустриального программирования (ИПТИП)</p>
+    </div>
+  </footer>
+</body>
+</html>

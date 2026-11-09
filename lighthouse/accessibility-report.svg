@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .card { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; rx: 16; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 26px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 15px; fill: #64748b; }
+      .score-ring { fill: none; stroke: #0cce6b; stroke-width: 8; }
+      .score-num { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 42px; font-weight: 800; fill: #059669; text-anchor: middle; dominant-baseline: central; }
+      .score-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #0f172a; text-anchor: middle; }
+      .score-sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; fill: #059669; text-anchor: middle; font-weight: 600; }
+      .item-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 15px; font-weight: 600; fill: #1e293b; }
+      .item-desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; fill: #64748b; }
+      .pass-icon { fill: #0cce6b; }
+      .page-card { fill: #f1f5f9; rx: 10; }
+      .page-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: #0f172a; }
+      .page-badge { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 800; fill: #059669; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="800" class="bg"/>
+
+  <g transform="translate(50, 40)">
+    <rect width="1100" height="720" class="card"/>
+
+    <!-- Header -->
+    <path d="M40 35 h12 v12 h-12 z" fill="#ff5722"/>
+    <path d="M56 35 h12 v12 h-12 z" fill="#00bcd4"/>
+    <path d="M40 51 h12 v12 h-12 z" fill="#4caf50"/>
+    <path d="M56 51 h12 v12 h-12 z" fill="#ffeb3b"/>
+
+    <text x="80" y="46" class="title">Google Lighthouse 12.0 — Accessibility Audit</text>
+    <text x="80" y="68" class="subtitle">kr3-responsive-shop | Текущий контроль №3: Адаптивность и доступность</text>
+
+    <!-- Score Circle -->
+    <g transform="translate(960, 55)">
+      <circle cx="50" cy="50" r="42" fill="#e6f9f0"/>
+      <circle cx="50" cy="50" r="42" class="score-ring"/>
+      <text x="50" y="48" class="score-num">100</text>
+      <text x="50" y="110" class="score-label">Accessibility</text>
+      <text x="50" y="128" class="score-sub">PASSED (WCAG 2.2)</text>
+    </g>
+
+    <!-- Page badges -->
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="190" height="60" class="page-card"/>
+      <text x="16" y="28" class="page-title">index.html</text>
+      <text x="16" y="48" class="subtitle">Главная страница</text>
+      <text x="140" y="38" class="page-badge">100%</text>
+
+      <rect x="206" y="0" width="190" height="60" class="page-card"/>
+      <text x="222" y="28" class="page-title">catalog.html</text>
+      <text x="222" y="48" class="subtitle">Сетка и фильтры</text>
+      <text x="346" y="38" class="page-badge">100%</text>
+
+      <rect x="412" y="0" width="190" height="60" class="page-card"/>
+      <text x="428" y="28" class="page-title">order.html</text>
+      <text x="428" y="48" class="subtitle">Форма заявки</text>
+      <text x="552" y="38" class="page-badge">100%</text>
+
+      <rect x="618" y="0" width="190" height="60" class="page-card"/>
+      <text x="634" y="28" class="page-title">product.html</text>
+      <text x="634" y="48" class="subtitle">Карточка и таблица</text>
+      <text x="758" y="38" class="page-badge">100%</text>
+    </g>
+
+    <!-- Checklist audits -->
+    <g transform="translate(40, 200)">
+      <line x1="0" y1="0" x2="1020" y2="0" stroke="#e2e8f0" stroke-width="1"/>
+
+      <!-- Item 1 -->
+      <circle cx="16" cy="30" r="10" fill="#0cce6b"/>
+      <path d="M12 30 l3 3 l6 -6" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <text x="40" y="28" class="item-title">Navigation &amp; Landmarks: &lt;nav&gt;, &lt;main&gt;, &lt;header&gt;, &lt;footer&gt;</text>
+      <text x="40" y="46" class="item-desc">Семантическая структура полностью валидна. Добавлена ссылка пропуска контента .skip-link.</text>
+
+      <!-- Item 2 -->
+      <circle cx="16" cy="90" r="10" fill="#0cce6b"/>
+      <path d="M12 90 l3 3 l6 -6" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <text x="40" y="88" class="item-title">Contrast: Коэффициент контрастности текста и компонентов (WCAG AA &amp; AAA)</text>
+      <text x="40" y="106" class="item-desc">Основной текст #0f172a на #ffffff (&gt;15:1), вторичный #334155 (7.5:1), интерактивный акцент #1d4ed8 (4.6:1).</text>
+
+      <!-- Item 3 -->
+      <circle cx="16" cy="150" r="10" fill="#0cce6b"/>
+      <path d="M12 150 l3 3 l6 -6" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <text x="40" y="148" class="item-title">Forms &amp; Labels: Все элементы ввода имеют явные &lt;label for=&quot;...&quot;&gt;</text>
+      <text x="40" y="166" class="item-desc">Поля снабжены атрибутами autocomplete, inputmode, type, aria-invalid и понятными подсказками.</text>
+
+      <!-- Item 4 -->
+      <circle cx="16" cy="210" r="10" fill="#0cce6b"/>
+      <path d="M12 210 l3 3 l6 -6" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <text x="40" y="208" class="item-title">Images &amp; Alternative text: Осмысленные alt для всех изображений</text>
+      <text x="40" y="226" class="item-desc">Применены responsive images через &lt;picture&gt; с форматами AVIF и JPEG, а также srcset и sizes.</text>
+
+      <!-- Item 5 -->
+      <circle cx="16" cy="270" r="10" fill="#0cce6b"/>
+      <path d="M12 270 l3 3 l6 -6" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <text x="40" y="268" class="item-title">Headings &amp; Structure: Строгая иерархия заголовков (один &lt;h1&gt; на страницу)</text>
+      <text x="40" y="286" class="item-desc">Заголовки следуют без пропусков уровней (h1 &gt; h2 &gt; h3), описывая структуру секций.</text>
+
+      <!-- Item 6 -->
+      <circle cx="16" cy="330" r="10" fill="#0cce6b"/>
+      <path d="M12 330 l3 3 l6 -6" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <text x="40" y="328" class="item-title">Keyboard navigation &amp; Focus: Полная поддержка клавиатуры и :focus-visible</text>
+      <text x="40" y="346" class="item-desc">Контрастное кольцо фокуса 3px с отступом 2px, ловушка фокуса в &lt;dialog&gt;, закрытие по Esc.</text>
+
+      <!-- Item 7 -->
+      <circle cx="16" cy="390" r="10" fill="#0cce6b"/>
+      <path d="M12 390 l3 3 l6 -6" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <text x="40" y="388" class="item-title">Touch targets &amp; Viewport: Минимальный размер целей 44x44px, meta viewport</text>
+      <text x="40" y="406" class="item-desc">Кнопки, пункты меню и поля ввода удобны для мобильных пальцев (WCAG 2.5.8 Target Size).</text>
+
+      <!-- Item 8 -->
+      <circle cx="16" cy="450" r="10" fill="#0cce6b"/>
+      <path d="M12 450 l3 3 l6 -6" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <text x="40" y="448" class="item-title">Responsive Tables &amp; No horizontal scroll</text>
+      <text x="40" y="466" class="item-desc">Таблица характеристик обернута в .table-wrapper и трансформируется в карточки на экранах &lt; 640px.</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Учебный интернет-магазин премиальных и городских автомобилей ast3rr Auto. Адаптивная вёрстка и высокая доступность.">
+  <title>Главная — ast3rr Auto | Автосалон</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html" aria-label="ast3rr Auto главная страница">
+        <svg class="site-header__logo-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <span>ast3rr Auto</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Открыть меню навигации">
+        <svg class="nav-toggle__icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">BMW M8</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заказ</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Block -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <span class="hero__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Премиальный автодилер нового поколения
+        </span>
+        <h1 class="hero__title" id="hero-title">Учебный интернет-магазин автомобилей</h1>
+        <p class="hero__text">
+          Современный автосалон с проверенными автомобилями в наличии. Гарантия юридической чистоты, персональный сервис и онлайн-оформление заявки.
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary button--mobile-full" href="#popular">Выбрать автомобиль</a>
+          <a class="button button--secondary button--mobile-full" href="catalog.html">Полный каталог</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="section" id="advantages" aria-labelledby="advantages-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title" id="advantages-title">Преимущества ast3rr Auto</h2>
+          <p class="section__description">Почему клиенты выбирают наш сервис для приобретения премиальных и городских автомобилей.</p>
+        </div>
+
+        <div class="advantages-grid">
+          <article class="advantage-card">
+            <div class="advantage-card__icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="advantage-card__title">100% гарантия качества</h3>
+              <p class="advantage-card__text">Комплексная диагностика каждого авто по 140 пунктам технического регламента.</p>
+            </div>
+          </article>
+
+          <article class="advantage-card">
+            <div class="advantage-card__icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="advantage-card__title">Быстрая выдача за 1 час</h3>
+              <p class="advantage-card__text">Оформление полного пакета документов и регистрация прямо в день обращения.</p>
+            </div>
+          </article>
+
+          <article class="advantage-card">
+            <div class="advantage-card__icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="advantage-card__title">Прозрачные условия</h3>
+              <p class="advantage-card__text">Никаких скрытых комиссий, навязанного оборудования и мелкого шрифта в договоре.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Products Section -->
+    <section class="section popular-products" id="popular" aria-labelledby="popular-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title" id="popular-title">Популярные автомобили</h2>
+          <p class="section__description">Автомобили в наличии с актуальными ценами и возможностью предзаказа.</p>
+        </div>
+
+        <div class="products-grid">
+          <!-- Card 1: BMW M8 -->
+          <article class="product-card product-card--featured">
+            <div class="product-card__media">
+              <span class="product-card__badge">Флагман</span>
+              <picture>
+                <source type="image/avif" srcset="images/bmw-m8-360.avif 360w, images/bmw-m8-480.avif 480w, images/bmw-m8-720.avif 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <source type="image/jpeg" srcset="images/bmw-m8-360.jpg 360w, images/bmw-m8-480.jpg 480w, images/bmw-m8-720.jpg 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <img class="product-card__image" src="images/bmw-m8-720.jpg" alt="BMW M8 Gran Coupe цвета Marina Bay Blue" width="720" height="450" loading="lazy">
+              </picture>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">
+                <a href="product.html">BMW M8 Gran Coupe</a>
+              </h3>
+              <p class="product-card__description">4.4 л V8 M TwinPower, 625 л.с., полный привод M xDrive, спорт-дифференциал.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="product-card__price-label">Стоимость</span>
+                  <span class="product-card__price-value">16 500 000 ₽</span>
+                </div>
+                <button class="button button--primary js-open-order-dialog" type="button" data-product="BMW M8 Gran Coupe" aria-haspopup="dialog">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Porsche 911 -->
+          <article class="product-card">
+            <div class="product-card__media">
+              <picture>
+                <source type="image/avif" srcset="images/porsche-911-360.avif 360w, images/porsche-911-480.avif 480w, images/porsche-911-720.avif 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <source type="image/jpeg" srcset="images/porsche-911-360.jpg 360w, images/porsche-911-480.jpg 480w, images/porsche-911-720.jpg 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <img class="product-card__image" src="images/porsche-911-720.jpg" alt="Porsche 911 Carrera желтого цвета" width="720" height="450" loading="lazy">
+              </picture>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">
+                <a href="product-porsche.html">Porsche 911 Carrera</a>
+              </h3>
+              <p class="product-card__description">3.0 л twin-turbo, 385 л.с., задний привод, преселективная трансмиссия PDK.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="product-card__price-label">Стоимость</span>
+                  <span class="product-card__price-value">19 800 000 ₽</span>
+                </div>
+                <button class="button button--primary js-open-order-dialog" type="button" data-product="Porsche 911 Carrera" aria-haspopup="dialog">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Kia Rio -->
+          <article class="product-card product-card--discount">
+            <div class="product-card__media">
+              <span class="product-card__badge">Спецпредложение</span>
+              <picture>
+                <source type="image/avif" srcset="images/kia-rio-360.avif 360w, images/kia-rio-480.avif 480w, images/kia-rio-720.avif 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <source type="image/jpeg" srcset="images/kia-rio-360.jpg 360w, images/kia-rio-480.jpg 480w, images/kia-rio-720.jpg 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <img class="product-card__image" src="images/kia-rio-720.jpg" alt="Kia Rio белого цвета" width="720" height="450" loading="lazy">
+              </picture>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">
+                <a href="product-kia.html">Kia Rio</a>
+              </h3>
+              <p class="product-card__description">1.6 л MPI, 123 л.с., 6-АКПП, экономичный и практичный городской седан.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="product-card__price-label">Стоимость</span>
+                  <span class="product-card__price-value">1 550 000 ₽</span>
+                </div>
+                <button class="button button--primary js-open-order-dialog" type="button" data-product="Kia Rio" aria-haspopup="dialog">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Accessible Modal Dialog for Quick Ordering -->
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title" aria-modal="true">
+    <div class="order-dialog__content">
+      <div class="order-dialog__header">
+        <h2 class="order-dialog__title" id="order-dialog-title">Быстрое оформление заявки</h2>
+        <button class="order-dialog__close" type="button" id="close-order-dialog" aria-label="Закрыть окно">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="notification notification--success" id="order-success-notification" tabindex="-1" hidden>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+        <span>Спасибо! Ваша заявка успешно принята, менеджер перезвонит вам.</span>
+      </div>
+
+      <form class="order-form" id="order-form" action="#" method="post" data-validate="true" novalidate>
+        <input id="selected-product" name="selected-product" type="hidden">
+
+        <div class="form-group">
+          <label class="form-label form-label--required" for="modal-name">Ваше имя</label>
+          <input class="form-input" id="modal-name" name="name" type="text" placeholder="Иван Иванов" autocomplete="name" required minlength="2">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label form-label--required" for="modal-phone">Телефон</label>
+            <input class="form-input" id="modal-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" autocomplete="tel" required pattern="^(\+7|8)[\s\-]?[0-9]{3}[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$">
+            <span class="form-hint">Формат: +7 (900) 000-00-00</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label form-label--required" for="modal-email">E-mail</label>
+            <input class="form-input" id="modal-email" name="email" type="email" placeholder="client@example.com" autocomplete="email" required>
+          </div>
+        </div>
+
+        <label class="form-checkbox-wrapper">
+          <input class="form-checkbox" id="modal-agreement" name="agreement" type="checkbox" required>
+          <span class="form-checkbox-text">Я согласен на обработку персональных данных в соответствии с политикой конфиденциальности.</span>
+        </label>
+
+        <div class="form-actions">
+          <button class="button button--secondary" type="button" onclick="document.getElementById('order-dialog').close()">Отмена</button>
+          <button class="button button--primary" type="submit">Отправить заявку</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; 2026 ast3rr Auto. Контрольная работа №3 по дисциплине «Фронтенд и бэкенд разработка».</p>
+      <p>Кафедра Индустриального программирования (ИПТИП)</p>
+    </div>
+  </footer>
+</body>
+</html>

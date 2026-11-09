@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог автомобилей интернет-магазина ast3rr Auto. Фильтры по параметрам, адаптивная сетка карточек, оформление покупки.">
+  <title>Каталог автомобилей — ast3rr Auto</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html" aria-label="ast3rr Auto главная страница">
+        <svg class="site-header__logo-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <span>ast3rr Auto</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Открыть меню навигации">
+        <svg class="nav-toggle__icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">BMW M8</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заказ</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section" id="main-content">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="location">Каталог</span></li>
+      </ol>
+    </nav>
+
+    <div class="section__header">
+      <h1 class="section__title">Каталог автомобилей в наличии</h1>
+      <p class="section__description">Полный ассортимент проверенных автомобилей с гарантией и возможностью моментального онлайн-бронирования.</p>
+    </div>
+
+    <div class="catalog-layout">
+      <!-- Sidebar Filters with Mobile Collapsible Drawer -->
+      <aside class="catalog-filters" aria-labelledby="filters-title">
+        <h2 class="catalog-filters__title" id="filters-title">Параметры поиска</h2>
+
+        <button class="button button--secondary catalog-filters__toggle" type="button" aria-expanded="false" aria-controls="filters-content">
+          <span>Показать фильтры</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+
+        <div class="catalog-filters__content" id="filters-content">
+          <form class="filters-form" action="#" method="get">
+            <fieldset class="filters-form__group">
+              <legend class="filters-form__legend">Кузов и класс</legend>
+              <div class="filters-form__options">
+                <label class="filters-form__checkbox-label">
+                  <input type="checkbox" name="type" value="sedan" checked> Седаны и Гран-купе
+                </label>
+                <label class="filters-form__checkbox-label">
+                  <input type="checkbox" name="type" value="sport"> Спорткары и купе
+                </label>
+                <label class="filters-form__checkbox-label">
+                  <input type="checkbox" name="type" value="hatchback"> Хэтчбеки
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="filters-form__group">
+              <legend class="filters-form__legend">Диапазон цены (₽)</legend>
+              <div class="filters-form__input-number-group">
+                <div>
+                  <label class="form-label" for="price-from">От</label>
+                  <input class="form-input" id="price-from" name="price_from" type="number" min="0" placeholder="1 000 000">
+                </div>
+                <div>
+                  <label class="form-label" for="price-to">До</label>
+                  <input class="form-input" id="price-to" name="price_to" type="number" min="0" placeholder="25 000 000">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="filters-form__group">
+              <legend class="filters-form__legend">Привод</legend>
+              <div class="filters-form__options">
+                <label class="filters-form__radio-label">
+                  <input type="radio" name="drive" value="all" checked> Все типы привода
+                </label>
+                <label class="filters-form__radio-label">
+                  <input type="radio" name="drive" value="awd"> Полный привод (AWD)
+                </label>
+                <label class="filters-form__radio-label">
+                  <input type="radio" name="drive" value="rwd"> Задний привод (RWD)
+                </label>
+              </div>
+            </fieldset>
+
+            <button class="button button--primary button--full" type="submit">Применить фильтр</button>
+          </form>
+        </div>
+      </aside>
+
+      <!-- Products Grid -->
+      <section class="catalog-products" aria-labelledby="catalog-list-title">
+        <h2 class="visually-hidden" id="catalog-list-title">Список предложений автосалона</h2>
+
+        <div class="products-grid">
+          <!-- Item 1: BMW M8 -->
+          <article class="product-card product-card--featured">
+            <div class="product-card__media">
+              <span class="product-card__badge">Флагман</span>
+              <picture>
+                <source type="image/avif" srcset="images/bmw-m8-360.avif 360w, images/bmw-m8-480.avif 480w, images/bmw-m8-720.avif 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <source type="image/jpeg" srcset="images/bmw-m8-360.jpg 360w, images/bmw-m8-480.jpg 480w, images/bmw-m8-720.jpg 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <img class="product-card__image" src="images/bmw-m8-720.jpg" alt="BMW M8 Gran Coupe цвета Marina Bay Blue" width="720" height="450" loading="lazy">
+              </picture>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">
+                <a href="product.html">BMW M8 Gran Coupe</a>
+              </h3>
+              <p class="product-card__description">4.4 л V8 M TwinPower, 625 л.с., полный привод M xDrive, спорт-дифференциал.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="product-card__price-label">Стоимость</span>
+                  <span class="product-card__price-value">16 500 000 ₽</span>
+                </div>
+                <button class="button button--primary js-open-order-dialog" type="button" data-product="BMW M8 Gran Coupe" aria-haspopup="dialog">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Porsche 911 -->
+          <article class="product-card">
+            <div class="product-card__media">
+              <picture>
+                <source type="image/avif" srcset="images/porsche-911-360.avif 360w, images/porsche-911-480.avif 480w, images/porsche-911-720.avif 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <source type="image/jpeg" srcset="images/porsche-911-360.jpg 360w, images/porsche-911-480.jpg 480w, images/porsche-911-720.jpg 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <img class="product-card__image" src="images/porsche-911-720.jpg" alt="Porsche 911 Carrera желтого цвета" width="720" height="450" loading="lazy">
+              </picture>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">
+                <a href="product-porsche.html">Porsche 911 Carrera</a>
+              </h3>
+              <p class="product-card__description">3.0 л twin-turbo, 385 л.с., задний привод, преселективная трансмиссия PDK.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="product-card__price-label">Стоимость</span>
+                  <span class="product-card__price-value">19 800 000 ₽</span>
+                </div>
+                <button class="button button--primary js-open-order-dialog" type="button" data-product="Porsche 911 Carrera" aria-haspopup="dialog">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Kia Rio -->
+          <article class="product-card product-card--discount">
+            <div class="product-card__media">
+              <span class="product-card__badge">Спецпредложение</span>
+              <picture>
+                <source type="image/avif" srcset="images/kia-rio-360.avif 360w, images/kia-rio-480.avif 480w, images/kia-rio-720.avif 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <source type="image/jpeg" srcset="images/kia-rio-360.jpg 360w, images/kia-rio-480.jpg 480w, images/kia-rio-720.jpg 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <img class="product-card__image" src="images/kia-rio-720.jpg" alt="Kia Rio белого цвета" width="720" height="450" loading="lazy">
+              </picture>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">
+                <a href="product-kia.html">Kia Rio</a>
+              </h3>
+              <p class="product-card__description">1.6 л MPI, 123 л.с., 6-АКПП, экономичный и практичный городской седан.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="product-card__price-label">Стоимость</span>
+                  <span class="product-card__price-value">1 550 000 ₽</span>
+                </div>
+                <button class="button button--primary js-open-order-dialog" type="button" data-product="Kia Rio" aria-haspopup="dialog">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Honda Civic -->
+          <article class="product-card">
+            <div class="product-card__media">
+              <picture>
+                <source type="image/avif" srcset="images/honda-civic-360.avif 360w, images/honda-civic-480.avif 480w, images/honda-civic-720.avif 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <source type="image/jpeg" srcset="images/honda-civic-360.jpg 360w, images/honda-civic-480.jpg 480w, images/honda-civic-720.jpg 720w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <img class="product-card__image" src="images/honda-civic-720.jpg" alt="Honda Civic серого цвета" width="720" height="450" loading="lazy">
+              </picture>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">
+                <a href="product-honda.html">Honda Civic</a>
+              </h3>
+              <p class="product-card__description">2.0 л, 158 л.с., вариатор, спортивный стиль и передовые системы безопасности.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="product-card__price-label">Стоимость</span>
+                  <span class="product-card__price-value">2 850 000 ₽</span>
+                </div>
+                <button class="button button--primary js-open-order-dialog" type="button" data-product="Honda Civic" aria-haspopup="dialog">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modal Dialog -->
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title" aria-modal="true">
+    <div class="order-dialog__content">
+      <div class="order-dialog__header">
+        <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+        <button class="order-dialog__close" type="button" id="close-order-dialog" aria-label="Закрыть окно">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="notification notification--success" id="order-success-notification" tabindex="-1" hidden>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+        <span>Спасибо! Ваша заявка успешно принята, менеджер перезвонит вам.</span>
+      </div>
+
+      <form class="order-form" id="order-form" action="#" method="post" data-validate="true" novalidate>
+        <input id="selected-product" name="selected-product" type="hidden">
+
+        <div class="form-group">
+          <label class="form-label form-label--required" for="modal-name">Ваше имя</label>
+          <input class="form-input" id="modal-name" name="name" type="text" placeholder="Иван Иванов" autocomplete="name" required minlength="2">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label form-label--required" for="modal-phone">Телефон</label>
+            <input class="form-input" id="modal-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" autocomplete="tel" required pattern="^(\+7|8)[\s\-]?[0-9]{3}[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$">
+            <span class="form-hint">Формат: +7 (900) 000-00-00</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label form-label--required" for="modal-email">E-mail</label>
+            <input class="form-input" id="modal-email" name="email" type="email" placeholder="client@example.com" autocomplete="email" required>
+          </div>
+        </div>
+
+        <label class="form-checkbox-wrapper">
+          <input class="form-checkbox" id="modal-agreement" name="agreement" type="checkbox" required>
+          <span class="form-checkbox-text">Я согласен на обработку персональных данных.</span>
+        </label>
+
+        <div class="form-actions">
+          <button class="button button--secondary" type="button" onclick="document.getElementById('order-dialog').close()">Отмена</button>
+          <button class="button button--primary" type="submit">Отправить заявку</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; 2026 ast3rr Auto. Контрольная работа №3 по дисциплине «Фронтенд и бэкенд разработка».</p>
+      <p>Кафедра Индустриального программирования (ИПТИП)</p>
+    </div>
+  </footer>
+</body>
+</html>
